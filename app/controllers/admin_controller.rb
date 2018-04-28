@@ -1,5 +1,6 @@
 class AdminController < ApplicationController
   def index
-    @project = Project.new
+    @projects = Project.all
+    @new_project = Project.new
   end
 end

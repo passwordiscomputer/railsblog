@@ -1,4 +1,4 @@
-class ProductsController < ApplicationController
+class ProjectsController < ApplicationController
   before_action :only => [:new, :edit] do
     redirect_to new_user_session_path unless current_user && current_user.admin
   end
@@ -6,10 +6,10 @@ class ProductsController < ApplicationController
 
   def create
     @project = Project.new(story_params)
-    if @story.save
-      redirect_to root_path
+    if @project.save
+      redirect_to admin_index_path
     else
-      render :new
+      redirect_to admin_index_path
     end
   end
 
