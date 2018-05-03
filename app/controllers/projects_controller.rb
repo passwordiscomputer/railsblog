@@ -3,9 +3,14 @@ class ProjectsController < ApplicationController
     redirect_to new_user_session_path unless current_user && current_user.admin
   end
 
+  def show
+    @project = Project.find(params[:id])
+    @new_image = @project.images.new()
+    @images = @project.images
+  end
 
   def create
-    @project = Project.new(story_params)
+    @project = Project.new(project_params)
     if @project.save
       redirect_to admin_index_path
     else
@@ -13,7 +18,7 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def story_params
+  def project_params
     params.require(:project).permit(:title, :description)
   end
 
