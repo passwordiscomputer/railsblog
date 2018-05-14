@@ -1,6 +1,6 @@
 class ImagesController < ApplicationController
   def create
-    @user = User.create(user_params)
+    @image = image.create(image_params)
   end
 
   private
@@ -8,7 +8,7 @@ class ImagesController < ApplicationController
   # Use strong_parameters for attribute whitelisting
   # Be sure to update your create() and update() controller methods.
 
-  def user_params
+  def image_params
     params.require(:user).permit(:file)
   end
 end

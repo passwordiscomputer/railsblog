@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    @new_image = @project.images.new()
+    @image = @project.images.new()
     @images = @project.images
   end
 
