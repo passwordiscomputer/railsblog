@@ -22,3 +22,13 @@ At first I really didn't like ruby on rails because it seemed so strict and ther
 # Learning Objectives
 
 My learning objective for the day was to learn how to use user authentication. The first time I tried to build my website I kinda screwed up and messed up my file system pretty bad. Going forward I plan to be a lot more careful and use branching to make sure I can revrt to an earlier version if I screw up on a branch instead of funking up the whole project. Also I need to become a lot better at being an efficient coder. I got too distracted and had a hard time staying focused on my code.
+
+# set up
+
+run the following commands
+
+* $ git clone https://github.com/passwordiscomputer/railsblog.git
+* $ bundle install
+* $ rails db:setup
+* $ rails s
+* check the seed file for the admin username and password
